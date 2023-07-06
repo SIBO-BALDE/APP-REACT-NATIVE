@@ -1,0 +1,105 @@
+const data={
+    products:[
+      {
+        _id:'1',
+        Name:'CHAPEAU',
+        slug:'CHAPEAU',
+        prix:25000,
+        category:'Accéssoires personnels et deco interieur',
+        Image:'https://res.cloudinary.com/dtquwiu3x/image/upload/v1688561121/chapeauu_fdqukj.png',
+        CountInStock:20,
+        brand:'la loincloth',
+        rating:4.5,
+        numReviews:40,
+        description:'high quality',
+            } , 
+            {
+         _id:'2',
+          Name:'LINGUERE',
+          slug:'LINGUERE',
+          prix:5000,
+          category:'Accéssoires femmes et deco inteieur ',
+          Image:'https://res.cloudinary.com/dtquwiu3x/image/upload/v1688561687/bracelets_duideu.png',
+          CountInStock:9,
+          brand:'la loincloth',
+          rating:2.5,
+          numReviews:9,
+          description:'high quality',
+            } ,
+            {
+         _id:'3',
+          Name:'YODI',
+          slug:'YODI',
+          prix:25000,
+          category:'Children cloth',
+          Image:'https://res.cloudinary.com/dtquwiu3x/image/upload/v1688561810/petit_oyzdzd.png',
+          CountInStock:0,
+          brand:'la loincloth',
+          rating:3.5,
+          numReviews:10,
+          description:'high quality',
+            },
+            
+     
+      {
+      _id:'4',
+        Name:'MOOTOU',
+        slug:'MOOTOU',
+        prix:20000,
+        category:'Accéssoires personnels et deco interieur',
+        Image:'https://res.cloudinary.com/dtquwiu3x/image/upload/v1688561811/pochette_hiidoa.png',
+        CountInStock:30,
+        brand:'la loincloth',
+        rating:3.5,
+        numReviews:21,
+        description:'high quality',
+      } , 
+        {
+        _id:'5',
+        Name:'SAKI',
+        slug:'SAKI',
+        prix:5000,
+        category:'Women cloth',
+        Image:'https://res.cloudinary.com/dtquwiu3x/image/upload/v1688561812/short_n7inmr.png',
+        CountInStock:78,
+        brand:'la loincloth',
+        rating:3.5,
+        numReviews:28,
+        description:'high quality',
+      } , 
+
+      {
+      _id:'6', 
+       Name:'MAMA',
+       slug:'MAMA',
+       prix:50000,
+       category:'men cloth',
+       Image:'https://res.cloudinary.com/dtquwiu3x/image/upload/v1688561687/boubou_xypls7.png',
+       CountInStock:16,
+       brand:'la loincloth',
+       rating:4.5,
+       numReviews:50,
+       description:'high quality',  
+      },
+      
+     
+          {
+     _id:'12',
+      Name:'COLIER',
+      slug:'COLIER',
+      prix:30000,
+      category:'Accéssoires personnels et deco interieur',
+      Image:'https://res.cloudinary.com/dtquwiu3x/image/upload/v1688561687/boucle_mnh9cq.png',
+      CountInStock:20,
+      brand:'la loincloth',
+      rating:5.5,
+      numReviews:40,
+      description:'high quality',
+          } , 
+    
+     
+    
+
+    ],
+};
+export default data;
