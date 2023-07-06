@@ -10,28 +10,30 @@ import { StyleSheet } from 'react-native';
 const renderScene=SceneMap({
     first:Profile,
     second:Orders,
-})
+});
 export default function Tabs() {
     const layout = useWindowDimensions()
     const [index,setIndex]=useState(0)
     const [routes]=useState([
         {
-            key:'first',title:'PROFILE'
+            key:'first',
+            title:'PROFILE',
         },
         {
-            key:'second',title:'ORDERS'
-        }
+            key:'second',
+            title:'ORDERS',
+        },
     ]);
-    const renderTabsBar = (props) =>{
+    const renderTabsBar = (props) =>(
         <TabBar {...props} 
         tabStyle={styles.tabStyle} 
         indicatorStyle={{backgroundColor:'#000'}}
         activeColor='#520909'
         inactiveColor='#ffff'
-        renderLabel={({route,color}) =><Text style={{color,...styles.text}}> {route.title} </Text>}
+        renderLabel={({route,color}) =><Text style={{color, ...styles.text}}> {route.title} </Text>}
         
         />
-    }
+    );
     
     return (
       
@@ -48,11 +50,14 @@ export default function Tabs() {
 
   const styles=StyleSheet.create({
     tabStyle:{
-        backgroundColor:'#000',
+        backgroundColor:"#A16509",
+        
 
     },
+
     text:{
-fontSize:13,
-fontWeight:'bold',
+       fontSize:13,
+       fontWeight:'bold',
     },
+    
   })
