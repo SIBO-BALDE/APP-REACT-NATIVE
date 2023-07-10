@@ -1,6 +1,5 @@
 import React from 'react';
 import {Box,Heading, Input, Pressable, VStack} from 'native-base'
-import {Image} from 'react-native'
 import { MaterialIcons, FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons'; 
 import { Button ,Text} from 'native-base';

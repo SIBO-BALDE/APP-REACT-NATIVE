@@ -14,7 +14,7 @@ const Swiper= ()=>(
     SwipeListView={''}
     previewOpenValue={-40}
     previewOpenDelay={3000}
-    data={data.products}
+    data={data.products.slice(0,3)}
     renderHiddenItem={renderHiddenIterms}
     renderItem={renderIterms}
     showsVerticalScrollIndicator={false} />

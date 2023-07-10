@@ -3,12 +3,15 @@ import React, { useState } from 'react';
 import NumericInput from 'react-native-numeric-input';
 import Rating from '../Components/Rating'
 import Buttone from '../Components/Buttone'
+import { useNavigation } from '@react-navigation/native';
+
 
 
 
 export default function SingleProduct({route}) {
   const [value,setValue] = useState(0);
-  const navigation =useNativeBase()
+  const navigation =useNavigation()
+
   const product = route.params
 
   return (

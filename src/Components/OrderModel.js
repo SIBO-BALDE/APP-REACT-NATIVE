@@ -1,6 +1,10 @@
 import { Center, HStack, Modal, VStack, Text, Button, Pressable, Image } from 'native-base';
 import React, { useState } from 'react';
 import Buttone from './Buttone'
+import { useNavigation } from '@react-navigation/native';
+
+
+
 const  OrderInfos=[
   {
     title:'Products',
@@ -27,6 +31,8 @@ const  OrderInfos=[
 
 export default function OrderModel() {
   const [showModel,setShowModel]=useState(false)
+  const navigation =useNavigation()
+
   const URL='https://res.cloudinary.com/dtquwiu3x/image/upload/v1688660876/Paypal1_ykuanw.png'
 
     return (
@@ -86,11 +92,15 @@ export default function OrderModel() {
             _text={{
               color:'#fff',
             }}
-            onPress={()=> setShowModel(false)}
+            onPress={()=> 
+              {
+            navigation.navigate('Bottom');
+            setShowModel(false);
+          }}
             _pressed={{
               bg:'#000'
             }}
-            > PLACE AN ORDER</Button>
+            > PAY LATER</Button>
           </Modal.Footer>
           </Modal.Content> 
         </Modal>

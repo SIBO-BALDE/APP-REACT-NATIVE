@@ -1,6 +1,8 @@
 import { Box,Center,Text ,VStack,ScrollView, FormControl, Input} from 'native-base';
 import React from 'react';
 import Buttone from '../Components/Buttone';
+import { useNavigation } from '@react-navigation/native';
+
 
 
 const ShippingInputs =[
@@ -23,6 +25,9 @@ const ShippingInputs =[
 ]
 
 export default function ShippingScreen() {
+
+  const navigation =useNavigation()
+
   return (
     <Box flex={1} safeAreaTop bg='#520909' py={5}>
     {/* headers */}
@@ -60,7 +65,11 @@ export default function ShippingScreen() {
                  />
         </FormControl>
       ))}
-        <Buttone bg='#520909' color='#fff' mt={5}>CONTINUE</Buttone>
+        <Buttone
+        onPress={()=> navigation.navigate('Checkout')}
+ 
+        bg='#520909' 
+        color='#fff' mt={5}>CONTINUE</Buttone>
 
       </VStack>
       </ScrollView>

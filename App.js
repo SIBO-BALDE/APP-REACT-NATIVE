@@ -7,6 +7,8 @@ import LoginScreen from './src/Screen/LoginScreen'
 import RegisterScreen from './src/Screen/RegisterScreen'
 import CartScreen from './src/Screen/CartScreen'
 import BottomNav from './src/Navigations/BottomNav';
+import OrderScreen from './src/Screen/OrderScreen';
+import HomeScreen from './src/Screen/HomeScreen';
 
 
 export default function App() {
@@ -26,6 +28,7 @@ export default function App() {
         <Stack.Screen name='Login' component={LoginScreen} />
         <Stack.Screen name='Register' component={RegisterScreen} />
         <Stack.Screen name='Cart' component={CartScreen} />
+        <Stack.Screen name='Order' component={OrderScreen} />
         <Stack.Screen name='Bottom' component={BottomNav} />
       </Stack.Navigator>
      </NavigationContainer>
