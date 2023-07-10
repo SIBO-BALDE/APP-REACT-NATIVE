@@ -1,23 +1,14 @@
 import React from 'react';
 import {Box,Heading, Input, Pressable, VStack} from 'native-base'
-import {Image} from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons'; 
 import { Button ,Text} from 'native-base';
-import Colors from '../Color'
 
 
-export default function LoginScreen() {
+
+export default function LoginScreen({navigation}) {
   return (
-    <Box flex={1} bg="#fff" >
-      <Image
-      flex={1}
-      alt="Logo"
-      resizeMode="cover"
-      size="lg"
-      w="full"
-      source={require('../../Images/cover.png')}
-      />
+    <Box flex={1} bg="#520909" >
 
    <Box 
    w="full"
@@ -59,12 +50,12 @@ export default function LoginScreen() {
     my={30}   w="40%" 
     rounded={50} 
     bg={'#A16509'}
+    onPress={()=>navigation.navigate('Bottom')}
     >
 
       LOGIN
     </Button>
-    <Pressable
-       mt={4} >
+    <Pressable mt={4} onPress={() => navigation.navigate('Register')} >
        <Text color='#ffff' >SIGN UP</Text>
     </Pressable>
    </Box>

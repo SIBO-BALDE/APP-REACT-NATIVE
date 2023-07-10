@@ -10,7 +10,8 @@ import {FontAwesome } from '@expo/vector-icons'
 const Swiper= ()=>(
     <SwipeListView
     rightOpenValue={-50}
-    previewRowKey={0}
+    // previewRowKey={0}
+    SwipeListView={''}
     previewOpenValue={-40}
     previewOpenDelay={3000}
     data={data.products}

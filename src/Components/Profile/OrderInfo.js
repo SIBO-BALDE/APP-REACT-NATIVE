@@ -38,7 +38,7 @@ export default function OrderInfo({icon,title,subTitle,text,success,danger}) {
             </Text>
             {/* statut */}
             {success && (
-                <Center py={2} mt={2} rounded={5} w='full' bg='#FF0000'>
+                <Center py={2} mt={2} rounded={5} w='full' bg='#007FFF'>
                     <Text fontSize={13} color='#fff'>Paid on Jan 12 2021</Text>
                 </Center>
             )}

@@ -2,6 +2,7 @@ import { Box, Flex, Heading, Image, Pressable, ScrollView ,Text} from 'native-ba
 import React from 'react';
 import data from '../data'
 import Rating from './Rating';
+import { useNavigation } from '@react-navigation/native';
 
 
 // HStack  premet de creer des card en react native
@@ -10,22 +11,24 @@ import Rating from './Rating';
 //Il s'agit d'un composant générique pour les besoins de mise en page de bas niveau en native base.
 // C'est semblable d'un div en html
 export default function HomeProducts() {
-
+ const navigation = useNavigation();
 
   // constproducts = []
   return (
-    <ScrollView    showsVerticalScrollIndicator={false} flex={1} >
+    <ScrollView showsVerticalScrollIndicator={false} flex={1} >
       <Flex 
       flexWrap='wrap' 
       direction='row'
       justifyContent='space-between' 
       px={6}
       >
-        { data.products?.map((product)=>{
-           <Pressable 
-            key={product._id} 
+        { data.products.map((product ,index)=>{ 
+           return <Pressable 
+           onPress={()=>navigation.navigate('Single',product)}
+
+           key={index} 
             w='47%' 
-            bg='#A16509'
+            bg='#F4F1E6'
             rounded="md"
             shadow={2}
             pt={0.3}
@@ -36,11 +39,13 @@ export default function HomeProducts() {
             >
 
            <Image
-             source={{uri:product.image}}
+             source={{uri:product.Image}}
              alt={product.Name}
              w="full"
              h={24}
              resizeMode="contain"
+             pt={4}
+            
              />
             <Box
             px={4}
@@ -50,16 +55,18 @@ export default function HomeProducts() {
              size='sm' bold >
              <Text fontSize={10} mt={1} isTrunccated w='full'>
               {product.Name}
-              {product.prix}FCFA
+             
               </Text>
-              <Rating value={product.rating} />
+             
+              
             </Heading>
+            <Text> {product.prix} FCFA</Text>
+            <Rating value={product.rating} />
             </Box>
             </Pressable>
           })
         }
       </Flex>
-    
     </ScrollView>
   )
 }

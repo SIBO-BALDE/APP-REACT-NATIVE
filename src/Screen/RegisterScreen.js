@@ -6,18 +6,10 @@ import { Ionicons } from '@expo/vector-icons';
 import { Button ,Text} from 'native-base';
 
 
-export default function RegisterScreen() {
+export default function RegisterScreen({navigation}) {
   return (
-    <Box flex={1} bg="#fff" >
-      <Image
-      flex={1}
-      alt="Logo"
-      resizeMode="cover"
-      size="lg"
-      w="full"
-      source={require('../../Images/cover.png')}
-      />
-
+    <Box flex={1} bg="#520909" >
+      
    <Box 
    w="full"
    h="full"
@@ -67,15 +59,21 @@ export default function RegisterScreen() {
    _pressed={{
       bg:'#fff',
    }}
-    my={30}   w="40%" 
+    my={30}   
+    w="40%" 
     rounded={50} 
     bg={'#A16509'}
+    onPress={()=>navigation.navigate('Bottom')}
+
     >
 
       SIGN UP
     </Button>
     <Pressable
-       mt={4} >
+       mt={4} 
+       onPress={()=>navigation.navigate('Login')}
+
+       >
        <Text color='#ffff' >LOGIN</Text>
     </Pressable>
    </Box>

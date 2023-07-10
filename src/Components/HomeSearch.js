@@ -1,6 +1,7 @@
 import { Box, HStack,Input } from "native-base";
 import { Pressable } from "react-native";
 import { FontAwesome } from '@expo/vector-icons'
+import { useNavigation } from "@react-navigation/native";
 
 
 
@@ -12,6 +13,7 @@ import { FontAwesome } from '@expo/vector-icons'
 // C'est semblable d'un div en html
 
 export default function HomeSeach() {
+  const navigation =useNavigation()
     return (
       <HStack 
       space={3} 
@@ -33,7 +35,8 @@ export default function HomeSeach() {
           bg:'#ffff'
          }}
          />
-        <Pressable ml={3}>
+        <Pressable ml={3} onPress={()=>navigation.navigate('Cart')}
+>
            <FontAwesome name='shopping-basket' size={24} color='#ffff' />
            <Box 
            px={1} 

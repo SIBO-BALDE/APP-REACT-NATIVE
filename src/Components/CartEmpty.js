@@ -15,10 +15,11 @@ export default function CartEmpty() {
             <Text color='#520909' bold mt={5}>
                 CART IS EMPTY
             </Text>
-        </Center>
-        <Buttone bg='#A16509' color='#ffff'>
+            <Buttone bg='#A16509' color='#ffff'>
             START SHOPPING
         </Buttone>
+        </Center>
+       
        </Box>
         
        

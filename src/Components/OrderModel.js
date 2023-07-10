@@ -1,4 +1,4 @@
-import { Center, HStack, Modal, VStack, Text, Button } from 'native-base';
+import { Center, HStack, Modal, VStack, Text, Button, Pressable, Image } from 'native-base';
 import React, { useState } from 'react';
 import Buttone from './Buttone'
 const  OrderInfos=[
@@ -25,8 +25,9 @@ const  OrderInfos=[
 ]
 
 
-export default function PlaceOrderModel() {
+export default function OrderModel() {
   const [showModel,setShowModel]=useState(false)
+  const URL='https://res.cloudinary.com/dtquwiu3x/image/upload/v1688660876/Paypal1_ykuanw.png'
 
     return (
       <Center>
@@ -35,7 +36,7 @@ export default function PlaceOrderModel() {
         bg='#A16509'
         color='#fff'
         mt={5}> 
-        SHOW TOTAL
+        SHOW PAYMENT & TOTAL
         </Buttone>
         <Modal isOpen={showModel} onClose={() => setShowModel(false)}size="lg">
           <Modal.Content maxWidth={350}>
@@ -61,16 +62,33 @@ export default function PlaceOrderModel() {
             </VStack>
           </Modal.Body>
           <Modal.Footer>
+            <Pressable 
+            w='full'
+            justifyContent='center' 
+            bg='#fcb101' 
+            h={45}
+            rounded={2} 
+            overflow='hidden'
+            onPress={()=>setShowModel(false)}
+            >
+                <Image source={{uri:URL}} 
+                alt='paypal'
+                resizeMode='contain' 
+                w='full'
+                h={34}
+                />
+            </Pressable>
             <Button 
-            flex={1} 
-            bg='#520909' 
+            mt={2} 
+            w='full'
+            bg='#000' 
             h={45} 
             _text={{
               color:'#fff',
             }}
             onPress={()=> setShowModel(false)}
             _pressed={{
-              bg:'#520909'
+              bg:'#000'
             }}
             > PLACE AN ORDER</Button>
           </Modal.Footer>
